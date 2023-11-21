@@ -1,4 +1,4 @@
-package com.turing.im;
+package com.turing.im.typeenum;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,6 +14,14 @@ public enum MessageType {//私聊消息和群聊消息
      * 群聊
      */
     GROUP(2),
+    /**
+     * 从客户端接收消息
+     * */
+    RECEIVE(3),
+    /**
+     * 向客户端发送消息
+     * */
+    SEND(4),
     /**
      * 不支持的类型
      */

@@ -1,4 +1,4 @@
-package com.turing.im;
+package com.turing.im.typeenum;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,15 +13,30 @@ public enum CommandType {//指令的类型枚举
      * */
     CONNECTION(10001),
     /**
-     * 聊天消息
+     * 聊天消息(废除，现在细分了)
      * */
     CHAT(10002),
     /**
      * 断开连接
      * */
     DISCONNECTION(10003),
+    /**
+     * 从客户端接收聊天消息
+     * */
+    RECEIVE(10004),
+    /**
+     * 向客户端发送聊天消息
+     * */
+    SEND(10005),
+    /**
+     * 从客户端接收一次握手确认消息
+     * */
+    RECEIVE_HAND(10006),
+    /**
+     * 向客户端发送一次握手确认消息
+     * */
+    SEND_HAND(10007),
     ERROR(-1),
-
     ;
     private final Integer code;//根据code码,对应不同的类型
 

@@ -1,6 +1,5 @@
 package com.turing.im.command;
 
-import com.turing.im.Command;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +7,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor//全参构造
 @NoArgsConstructor//无参构造
 @Data
-public class ChatMessage extends Command {
+public class ChatMessage extends ConnectCommand {
 
     /**
      * 消息类型
@@ -24,4 +23,12 @@ public class ChatMessage extends Command {
      * 内容
      * */
     private String content;
+
+    public ChatMessage(ConnectCommand connectCommand, Integer type, String target, String content) {
+        super(connectCommand.getCode(), connectCommand.getNickName());
+        this.type = type;
+        this.target = target;
+        this.content = content;
+    }
+
 }

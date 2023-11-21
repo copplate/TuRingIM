@@ -1,16 +1,15 @@
 package com.turing.im.handler;
 
 import com.alibaba.fastjson2.JSON;
-import com.turing.im.Command;
 import com.turing.im.IMServer;
-import com.turing.im.MessageType;
+import com.turing.im.typeenum.MessageType;
 import com.turing.im.Result;
 import com.turing.im.command.ChatMessage;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import io.netty.util.internal.StringUtil;
-
+@Deprecated
 public class ChatHandler {
 
     public static void execute(ChannelHandlerContext ctx, TextWebSocketFrame frame) {

@@ -1,7 +1,7 @@
 package com.turing.im;
 
 import com.alibaba.fastjson2.JSON;
-import org.example.Main;
+import com.turing.im.command.ConnectCommand;
 import org.junit.Test;
 
 public class TuringIMApplication {//启动类
@@ -11,7 +11,7 @@ public class TuringIMApplication {//启动类
 
     @Test
     public void getString() {
-        String s = JSON.toJSONString(new Command(10001, "接天莲叶无穷碧"));
+        String s = JSON.toJSONString(new ConnectCommand(10001, "接天莲叶无穷碧"));
         System.out.println(s);
 
     }

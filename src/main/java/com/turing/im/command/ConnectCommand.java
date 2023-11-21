@@ -1,4 +1,4 @@
-package com.turing.im;
+package com.turing.im.command;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor//全参构造
 @NoArgsConstructor//无参构造
 @Data
-public class Command {
+public class ConnectCommand {
 
     /**
      * 连接信息编码
