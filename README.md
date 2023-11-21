@@ -28,3 +28,7 @@
 
 12、再去建一个ChatMessage的type的枚举类MessageType。
 
+01、实现群聊的第一步，加入一个群聊
+
+
+

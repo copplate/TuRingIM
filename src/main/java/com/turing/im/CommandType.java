@@ -16,6 +16,10 @@ public enum CommandType {//指令的类型枚举
      * 聊天消息
      * */
     CHAT(10002),
+    /**
+     * 断开连接
+     * */
+    DISCONNECTION(10003),
     ERROR(-1),
 
     ;

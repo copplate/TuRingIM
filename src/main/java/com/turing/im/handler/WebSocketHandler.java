@@ -20,7 +20,9 @@ public class WebSocketHandler extends SimpleChannelInboundHandler<TextWebSocketF
         //1、首先要解析frame，我们可以定义一种序列化的格式，比如可以前后端约定好用json的方式来处理消息
         //1、第一步，解析成Command
         try {
+            System.out.println("frame.text()" + frame.text());
             Command command = JSON.parseObject(frame.text(), Command.class);
+            System.out.println("command" + command);
             switch (CommandType.match(command.getCode())) {
                 //case CONNECTION -> ConnectionHandler.execute();//这种写法得14+才支持
                 case CONNECTION:

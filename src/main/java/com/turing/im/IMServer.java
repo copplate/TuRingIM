@@ -60,6 +60,6 @@ public class IMServer {
                     }
                 });
         //配置bootstrap去绑定一个端口，绑定完端口之后，Netty的一个Server程序就搭建完成了
-        ChannelFuture future = bootstrap.bind(8080);
+        ChannelFuture future = bootstrap.bind(8080);//2023/11/15   这个future也没有使用啊，怎么绑定的8080
     }
 }

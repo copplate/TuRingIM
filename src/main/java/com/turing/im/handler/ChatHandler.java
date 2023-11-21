@@ -17,6 +17,7 @@ public class ChatHandler {
         try {
             //1、第一步，把消息的格式转成ChatMessage
             ChatMessage chat = JSON.parseObject(frame.text(), ChatMessage.class);
+            System.out.println("frame.text()" + frame.text());
             //接收到消息，就拿到了目标对象，然后再判断是私聊消息还是群聊消息，此处只处理私聊消息
             switch (MessageType.match(chat.getType())) {
                 case PRIVATE:
@@ -32,7 +33,6 @@ public class ChatHandler {
                     } else {//如果在线，就直接发送消息
                         channel.writeAndFlush(Result.success("私聊消息:(" + chat.getNickName() + ")", chat.getContent()));
                     }
-
                     break;
                 //所有的消息读写都在Channel里进行
                 default: ctx.channel().writeAndFlush(Result.fail("不支持的消息类型"));
